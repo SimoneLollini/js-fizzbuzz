@@ -5,16 +5,16 @@ for (let i = 1; i <= 100; i++) {
     if (i % 3 == 0 && i % 5 == 0) {
         console.log("Fizz" + "Buzz" + "-" + i);
         n = ("Fizz" + "Buzz" + "-" + i);
-        n = `<div class="square">FizzBuss</div>`;
+        n = `<div class="square bg-success">FizzBuss</div>`;
     }
     else if (i % 3 == 0) {
         console.log("Fizz" + "-" + i);
-        n = `<div class="square">Fizz</div>`;
+        n = `<div class="square bg-danger   ">Fizz</div>`;
     } else if (i % 5 == 0) {
         console.log("Buzz" + "-" + i);
-        n = `<div class="square">Buzz</div>`;
+        n = `<div class="square bg-warning">Buzz</div>`;
     } else {
-        n = `<div class="square">${i}</div>`;
+        n = `<div class="square bg-info">${i}</div>`;
     }
     document.querySelector('.container').insertAdjacentHTML('beforeend', n);
     //     switch () {
