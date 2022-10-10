@@ -1,18 +1,22 @@
 // Scrivi un programma che stampi in console i numeri da 1 a 100,
 for (let i = 1; i <= 100; i++) {
+    let n = `<div> ${i} </div>`;
 
     if (i % 3 == 0 && i % 5 == 0) {
         console.log("Fizz" + "Buzz" + "-" + i);
+        n = ("Fizz" + "Buzz" + "-" + i);
+        n = `<div class="square">FizzBuss</div>`;
     }
     else if (i % 3 == 0) {
         console.log("Fizz" + "-" + i);
+        n = `<div class="square">Fizz</div>`;
     } else if (i % 5 == 0) {
         console.log("Buzz" + "-" + i);
-
+        n = `<div class="square">Buzz</div>`;
     } else {
-        console.log(i);
+        n = `<div class="square">${i}</div>`;
     }
-
+    document.querySelector('.container').insertAdjacentHTML('beforeend', n);
     //     switch () {
     //         case(i % 3 == 0 && i % 5 == 0):
     //             console.log("Fizz" + "Buzz" + "-" + i);
